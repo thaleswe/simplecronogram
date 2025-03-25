@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cronograma Semanal com Cores</title>
+    
+    <link rel="stylesheet" href="/style.css">
+</head>
+
+<body>
+    <div class="app">
+        <h1>Cronograma Semanal</h1>
+
+        <div class="container">
+            <aside>
+                <button id="addRowButton">Adicionar Linha</button>
+                <button id="downloadCronogramaButton">Baixar tabela</button>
+                <button id="resetTableButton">Resetar Tabela</button>
+            </aside>
+            <table id="scheduleTable">
+                <thead>
+                    <tr>
+                        <th></th>
+                        <th>Dom</th>
+                        <th>Seg</th>
+                        <th>Ter</th>
+                        <th>Qua</th>
+                        <th>Qui</th>
+                        <th>Sex</th>
+                        <th>Sab</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- As linhas de horário serão inseridas dinamicamente -->
+                </tbody>
+            </table>
+        </div>
+
+        <!-- Popup de download -->
+        <div id="downloadPopup" class="download-popup">
+            <div class="popup-content">
+                <span class="close-popup">&times;</span>
+                <h2>Baixar Cronograma</h2>
+                <p>Escolha o formato:</p>
+                <button id="downloadPDF">Baixar PDF</button>
+                <button id="downloadImage">Baixar Imagem</button>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- Bibliotecas para conversão -->
+    <script src="https://html2canvas.hertzen.com/dist/html2canvas.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    
+    <script src="/script.js"></script>
+</body>
+
+</html>
